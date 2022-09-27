@@ -8,7 +8,7 @@ import { ShoppingCart } from 'phosphor-react';
 import styles from './styles.module.scss';
 
 export interface CardProps {
-  coffee: Coffee;
+  coffee: Omit<Coffee, 'quantity' | 'totalPrice'>;
 }
 
 export function Card({ coffee }: CardProps) {
