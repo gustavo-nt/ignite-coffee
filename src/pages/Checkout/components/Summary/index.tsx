@@ -15,7 +15,7 @@ export function Summary() {
 
       <div className={styles.content}>
         {products.map((coffee) => (
-          <Card key={coffee.id} {...coffee} />
+          <Card key={coffee.id} coffee={coffee} />
         ))}
 
         <Confirmation />

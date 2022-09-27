@@ -4,9 +4,20 @@ import { Trash } from "phosphor-react";
 import { formatPrice } from "../../../../utils/format";
 import { useCartContext } from "../../../../contexts/CartContext";
 import { QuantityInput } from "../../../../components/QuantityInput";
-import { Coffee as CardProps } from "../../../../reducers/cart/reducer";
 
 import styles from "./styles.module.scss";
+
+export interface CardProps {
+  coffee: {
+    id: number;
+    tags: string[];
+    name: string;
+    info: string;
+    image: string;
+    price: number;
+    quantity: number;
+  };
+}
 
 export function Card({ coffee }: CardProps) {
   const { removeProductFromCart, updateProductQuantity } = useCartContext();
