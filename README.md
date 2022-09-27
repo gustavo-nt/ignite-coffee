@@ -34,7 +34,7 @@
 - [x] Listar pedidos
 
 ### 💻 Demonstração
-<img src="https://github.com/gustavo-nt/coffee-delivery/blob/master/src/assets/cover.png" alt="Imagem de demonstração" />
+<img src="https://github.com/gustavo-nt/ignite-coffee/blob/master/src/assets/cover.png" alt="Imagem de demonstração" />
 
 ### ⚙ Pré-requisitos
 
