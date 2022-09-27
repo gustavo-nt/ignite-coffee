@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6.375rem;
+
+  > div {
+    display: flex;
+    padding: 2.5rem;
+    position: relative;
+    background: var(--white);
+    border-radius: 6px 36px;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 2rem;
+
+    &::before {
+      content: "";
+      z-index: -1;
+      background: linear-gradient(102.89deg, rgb(219, 172, 44) 2.61%, rgb(128, 71, 248) 98.76%);
+      border-radius: 7px 37px;
+      position: absolute;
+      inset: -1px;
+    }
+  }
+
+  > img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    gap: 2.375rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .container > div {
+    width: 100%;
+  }
+}

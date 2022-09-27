@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  padding: 2.5rem;
+  flex-direction: column;
+  background: var(--gray-100);
+  border-radius: 6px;
+  gap: 2rem;
+}
+
+.description {
+  display: flex;
+  gap: 0.5rem;
+
+  svg {
+    color: var(--yellow-800);
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+
+    h3 {
+      font-weight: 400;
+      color: var(--gray-700);
+      line-height: 1.3125rem;
+    }
+
+    p {
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+    }
+  }
+}
+
+.form {
+  width: 100%;
+  display: grid;
+  gap: 1rem 0.75rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 0.3rem;
+
+  label {
+    padding-bottom: 0.3rem;
+    font-size: 0.875rem;
+  }
+
+  &[data-field='city'],
+  &[data-field='street'],
+  &[data-field='complement'],
+  &[data-field="neighborhood"] {
+    grid-column-start: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .field {
+    &[data-field="number"] {
+      grid-column-start: span 1;
+    }
+
+    &[data-field="neighborhood"] {
+      grid-column-start: span 3;
+    }
+
+    &[data-field="city"] {
+      grid-column-start: span 2;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .form {
+    grid-template-columns: 1fr 1fr 3.75rem;
+  }
+
+  .field {
+    &[data-field="neighborhood"] {
+      grid-column-start: span 1;
+    }
+  }
+}
