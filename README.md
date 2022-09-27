@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/gustav-nt/ignite-coffee/blob/master/src/assets/logo.svg" alt="Coffee delivery" width="130"/>
+  <img src="https://github.com/gustavo-nt/ignite-coffee/blob/master/src/assets/logo.svg" alt="Coffee delivery" width="130"/>
 </p>
 
 <h1 align="center">
