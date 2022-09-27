@@ -87,4 +87,4 @@ Esse projeto está sob a licença MIT.
 
 <hr/>
 
-Feito por Gustavi Teixeira
+Feito por Gustavo Teixeira
