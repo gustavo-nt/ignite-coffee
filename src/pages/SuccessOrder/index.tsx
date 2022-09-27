@@ -1,6 +1,6 @@
-import { Information } from './Information';
+import { Information } from "./Information";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 export function SuccessOrder() {
   return (

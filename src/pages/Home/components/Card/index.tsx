@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import { formatPrice } from '../../../../utils/format';
-import { Coffee } from '../../../../reducers/cart/reducer';
-import { QuantityInput } from '../../../../components/QuantityInput';
-import { useCartContext } from '../../../../contexts/CartContext';
+import { useState } from "react";
+import { formatPrice } from "../../../../utils/format";
+import { Coffee } from "../../../../reducers/cart/reducer";
+import { QuantityInput } from "../../../../components/QuantityInput";
+import { useCartContext } from "../../../../contexts/CartContext";
 
-import { ShoppingCart } from 'phosphor-react';
-import styles from './styles.module.scss';
+import { ShoppingCart } from "phosphor-react";
+import styles from "./styles.module.scss";
 
 export interface CardProps {
-  coffee: Omit<Coffee, 'quantity' | 'totalPrice'>;
+  coffee: Pick<Coffee, "id" | "tags" | "name" | "info" | "image" | "price">;
 }
 
 export function Card({ coffee }: CardProps) {
@@ -27,13 +27,10 @@ export function Card({ coffee }: CardProps) {
 
   return (
     <div className={styles.container}>
-      <img 
-        src={`/coffees/${image}`} 
-        alt={name}
-      />
+      <img src={`/coffees/${image}`} alt={name} />
 
       <div className={styles.tags}>
-        {tags.map(tag => (
+        {tags.map((tag) => (
           <span key={`${tag}-${id}`}>{tag}</span>
         ))}
       </div>

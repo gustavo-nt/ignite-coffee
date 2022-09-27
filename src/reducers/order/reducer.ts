@@ -1,6 +1,6 @@
-import produce from 'immer';
-import { ActionTypes } from './actions';
-import { CartState } from '../cart/reducer';
+import produce from "immer";
+import { ActionTypes } from "./actions";
+import { CartState } from "../cart/reducer";
 
 export interface Order extends CartState {
   id: number;

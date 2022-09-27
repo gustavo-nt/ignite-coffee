@@ -1,11 +1,11 @@
-import { PaymentType } from '../../Orders';
-import { useLocation } from 'react-router-dom';
-import { TagWithIcon } from '../../../components/TagWithIcon';
-import { Order } from '../../../reducers/order/reducer';
+import { PaymentType } from "../../Orders";
+import { useLocation } from "react-router-dom";
+import { TagWithIcon } from "../../../components/TagWithIcon";
+import { Order } from "../../../reducers/order/reducer";
 
-import { Clock, CurrencyDollar, MapPin } from 'phosphor-react';
-import homeImg from './../../../assets/checkout-img.svg';
-import styles from './styles.module.scss';
+import { Clock, CurrencyDollar, MapPin } from "phosphor-react";
+import homeImg from "./../../../assets/checkout-img.svg";
+import styles from "./styles.module.scss";
 
 export function Information() {
   const { state } = useLocation();
@@ -14,23 +14,23 @@ export function Information() {
   return (
     <section className={styles.container}>
       <div>
-        <TagWithIcon 
+        <TagWithIcon
           icon={<MapPin weight="fill" />}
-          iconBg='#8047f8'
+          iconBg="#8047f8"
           text={
             <p>
-              Entrega em <strong>{shippingAddress?.street}</strong>,{' '}
+              Entrega em <strong>{shippingAddress?.street}</strong>,{" "}
               {shippingAddress?.number}
               <br />
-              {shippingAddress?.neighborhood} - {shippingAddress?.city},{' '}
+              {shippingAddress?.neighborhood} - {shippingAddress?.city},{" "}
               {shippingAddress?.state}
             </p>
           }
         />
 
-        <TagWithIcon 
+        <TagWithIcon
           icon={<Clock weight="fill" />}
-          iconBg='#dbac2c'
+          iconBg="#dbac2c"
           text={
             <p>
               Previsão de entrega
@@ -40,9 +40,9 @@ export function Information() {
           }
         />
 
-        <TagWithIcon 
+        <TagWithIcon
           icon={<CurrencyDollar weight="fill" />}
-          iconBg='#c47f17'
+          iconBg="#c47f17"
           text={
             <p>
               Pagamento na entrega
@@ -52,7 +52,7 @@ export function Information() {
           }
         />
       </div>
-      
+
       <img src={homeImg} alt="Imagem de um motoboy" />
     </section>
   );

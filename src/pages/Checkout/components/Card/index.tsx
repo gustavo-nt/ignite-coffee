@@ -1,12 +1,12 @@
-import { useCallback } from 'react';
-import { Trash } from 'phosphor-react';
+import { useCallback } from "react";
+import { Trash } from "phosphor-react";
 
-import { formatPrice } from '../../../../utils/format';
-import { CardProps } from '../../../Home/components/Card';
-import { useCartContext } from '../../../../contexts/CartContext';
-import { QuantityInput } from '../../../../components/QuantityInput';
+import { formatPrice } from "../../../../utils/format";
+import { useCartContext } from "../../../../contexts/CartContext";
+import { QuantityInput } from "../../../../components/QuantityInput";
+import { Coffee as CardProps } from "../../../../reducers/cart/reducer";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 export function Card({ coffee }: CardProps) {
   const { removeProductFromCart, updateProductQuantity } = useCartContext();
@@ -19,28 +19,23 @@ export function Card({ coffee }: CardProps) {
         productId: id,
       });
     },
-    [id],
+    [id]
   );
 
   return (
     <div className={styles.container}>
-      <img 
-        src={`/coffees/${image}`} 
-        alt={name}
-      />
+      <img src={`/coffees/${image}`} alt={name} />
 
       <div className={styles.content}>
         <div className={styles.header}>
-          <span className={styles.title}>
-            {name}
-          </span>
+          <span className={styles.title}>{name}</span>
           <div className={styles.price}>
             <strong>R$ {formatPrice(price)}</strong>
           </div>
         </div>
 
         <div className={styles.footer}>
-          <QuantityInput 
+          <QuantityInput
             size="small"
             value={quantity}
             onChangeValue={(value) => handleUpdateProductQuantity(value)}

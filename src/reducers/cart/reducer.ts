@@ -1,8 +1,8 @@
-import produce from 'immer';
-import { formatNumber } from '../../utils/format';
-import { ActionTypes } from './actions';
+import produce from "immer";
+import { formatNumber } from "../../utils/format";
+import { ActionTypes } from "./actions";
 
-export type PaymentMethods = 'cash' | 'credit' | 'debit';
+export type PaymentMethods = "cash" | "credit" | "debit";
 
 export interface Coffee {
   id: number;
@@ -39,7 +39,7 @@ export const cartReducer = (state: CartState, action: any) => {
   switch (action.type) {
     case ActionTypes.ADD_PRODUCT_CART: {
       const findProductIndex = state.products.findIndex(
-        (product) => product.id === action.payload.newProduct.id,
+        (product) => product.id === action.payload.newProduct.id
       );
 
       return produce(state, (draft) => {
@@ -61,8 +61,8 @@ export const cartReducer = (state: CartState, action: any) => {
         draft.totalProducts = formatNumber(
           draft.products.reduce(
             (prevValue, currentValue) => prevValue + currentValue.totalPrice,
-            0,
-          ),
+            0
+          )
         );
 
         draft.amount = formatNumber(draft.totalProducts + draft.deliveryAmount);
@@ -70,7 +70,7 @@ export const cartReducer = (state: CartState, action: any) => {
     }
     case ActionTypes.REMOVE_PRODUCT_CART: {
       const existProductIndex = state.products.findIndex(
-        (product) => product.id === action.payload.productId,
+        (product) => product.id === action.payload.productId
       );
 
       if (existProductIndex < 0) {
@@ -80,7 +80,7 @@ export const cartReducer = (state: CartState, action: any) => {
       return produce(state, (draft) => {
         draft.products.splice(existProductIndex, 1);
         draft.totalProducts = formatNumber(
-          state.totalProducts - state.products[existProductIndex].totalPrice,
+          state.totalProducts - state.products[existProductIndex].totalPrice
         );
         draft.amount = formatNumber(draft.totalProducts + state.deliveryAmount);
         draft.numberOfItems =
@@ -89,7 +89,7 @@ export const cartReducer = (state: CartState, action: any) => {
     }
     case ActionTypes.UPDATE_PRODUCT_QUANTITY: {
       const findProductIndex = state.products.findIndex(
-        (product) => product.id === action.payload.productId,
+        (product) => product.id === action.payload.productId
       );
 
       if (findProductIndex < 0) {
@@ -110,8 +110,8 @@ export const cartReducer = (state: CartState, action: any) => {
         draft.totalProducts = formatNumber(
           draft.products.reduce(
             (prevValue, currentValue) => prevValue + currentValue.totalPrice,
-            0,
-          ),
+            0
+          )
         );
 
         draft.amount = formatNumber(draft.totalProducts + draft.deliveryAmount);

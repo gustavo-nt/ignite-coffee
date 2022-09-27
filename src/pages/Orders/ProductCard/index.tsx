@@ -1,7 +1,7 @@
 import { Coffee } from "../../../reducers/cart/reducer";
 import { formatPrice } from "../../../utils/format";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 export function ProductCard({
   product: { image, name, totalPrice, quantity, tags, id, info },

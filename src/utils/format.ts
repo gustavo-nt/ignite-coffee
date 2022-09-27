@@ -14,9 +14,9 @@ export const formatDate = (date: Date) => {
   const hours = date.getHours();
   const minutes = date.getMinutes();
 
-  return `${String(day).padStart(2, '0')}/${String(month).padStart(
+  return `${String(day).padStart(2, "0")}/${String(month).padStart(
     2,
-    '0',
+    "0"
   )}/${year} ${hours}h:${minutes}m`;
 };
 

@@ -1,6 +1,6 @@
 import { Minus, Plus } from "phosphor-react";
 import { useEffect, useMemo, useState } from "react";
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 interface QuantityInputProps {
   value?: number;
@@ -51,11 +51,11 @@ export function QuantityInput({
       <button onClick={handleDecrementValue} disabled={decreaseButtonDisabled}>
         <Minus size={14} weight="fill" />
       </button>
-      <input 
+      <input
         step={1}
         type="number"
         value={newValue}
-        onChange={(e) => handleChangeInput(e)} 
+        onChange={(e) => handleChangeInput(e)}
       />
       <button onClick={handleIncrementValue}>
         <Plus size={14} weight="fill" />

@@ -4,7 +4,7 @@ import {
   useEffect,
   useReducer,
   useState,
-} from 'react';
+} from "react";
 
 import {
   addProductToCartAction,
@@ -13,14 +13,14 @@ import {
   createShippingAddressAction,
   updateProductQuantityAction,
   resetCartAction,
-} from '../reducers/cart/actions';
+} from "../reducers/cart/actions";
 
 import {
   Coffee,
   cartReducer,
   PaymentMethods,
   ShippingAddress,
-} from '../reducers/cart/reducer';
+} from "../reducers/cart/reducer";
 
 interface CartContextProviderProps {
   children: React.ReactNode;
@@ -68,7 +68,7 @@ export const CartContextProvider = ({ children }: CartContextProviderProps) => {
     },
     () => {
       const storedStateAsJSON = localStorage.getItem(
-        '@coffee-delivery:cart-state-1.0.0',
+        "@coffee-delivery:cart-state-1.0.0"
       );
 
       if (storedStateAsJSON) {
@@ -84,7 +84,7 @@ export const CartContextProvider = ({ children }: CartContextProviderProps) => {
         paymentMethod: null,
         shippingAddress: null,
       };
-    },
+    }
   );
 
   const resetCart = () => {
@@ -115,7 +115,7 @@ export const CartContextProvider = ({ children }: CartContextProviderProps) => {
       updateProductQuantityAction({
         productId,
         newQuantity,
-      }),
+      })
     );
   };
 
@@ -135,7 +135,7 @@ export const CartContextProvider = ({ children }: CartContextProviderProps) => {
       setIsDisabledSubmitButton(true);
     }
 
-    localStorage.setItem('@coffee-delivery:cart-state-1.0.0', stateJSON);
+    localStorage.setItem("@coffee-delivery:cart-state-1.0.0", stateJSON);
   }, [cartState]);
 
   const validadeShippingAddress = ({

@@ -51,9 +51,9 @@
     font-size: 0.875rem;
   }
 
-  &[data-field='city'],
-  &[data-field='street'],
-  &[data-field='complement'],
+  &[data-field="city"],
+  &[data-field="street"],
+  &[data-field="complement"],
   &[data-field="neighborhood"] {
     grid-column-start: span 2;
   }

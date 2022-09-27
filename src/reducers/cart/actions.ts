@@ -1,12 +1,12 @@
-import { Coffee, PaymentMethods, ShippingAddress } from './reducer';
+import { Coffee, PaymentMethods, ShippingAddress } from "./reducer";
 
 export enum ActionTypes {
-  RESET_CART = 'RESET_CART',
-  ADD_PRODUCT_CART = 'ADD_PRODUCT_CART',
-  REMOVE_PRODUCT_CART = 'REMOVE_PRODUCT_CART',
-  DEFINE_PAYMENT_METHOD = 'DEFINE_PAYMENT_METHOD',
-  UPDATE_PRODUCT_QUANTITY = 'UPDATE_PRODUCT_QUANTITY',
-  CREATE_SHIPPING_ADDRESS = 'CREATE_SHIPPING_ADDRESS',
+  RESET_CART = "RESET_CART",
+  ADD_PRODUCT_CART = "ADD_PRODUCT_CART",
+  REMOVE_PRODUCT_CART = "REMOVE_PRODUCT_CART",
+  DEFINE_PAYMENT_METHOD = "DEFINE_PAYMENT_METHOD",
+  UPDATE_PRODUCT_QUANTITY = "UPDATE_PRODUCT_QUANTITY",
+  CREATE_SHIPPING_ADDRESS = "CREATE_SHIPPING_ADDRESS",
 }
 
 export const resetCartAction = () => ({
@@ -49,7 +49,7 @@ export const updateProductQuantityAction = ({
 });
 
 export const createShippingAddressAction = (
-  shippingAddress: ShippingAddress,
+  shippingAddress: ShippingAddress
 ) => ({
   type: ActionTypes.CREATE_SHIPPING_ADDRESS,
   payload: {

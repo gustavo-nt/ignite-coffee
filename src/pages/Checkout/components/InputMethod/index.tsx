@@ -1,8 +1,8 @@
-import { ReactNode } from 'react';
-import { useCartContext } from '../../../../contexts/CartContext';
-import { PaymentMethods } from '../../../../reducers/cart/reducer';
+import { ReactNode } from "react";
+import { useCartContext } from "../../../../contexts/CartContext";
+import { PaymentMethods } from "../../../../reducers/cart/reducer";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 export interface InputMethodProps {
   label: string;
@@ -10,11 +10,7 @@ export interface InputMethodProps {
   name: PaymentMethods;
 }
 
-export function InputMethod({
-  icon, 
-  label, 
-  name
-}: InputMethodProps) {
+export function InputMethod({ icon, label, name }: InputMethodProps) {
   const {
     definePaymentMethod,
     cart: { paymentMethod },
@@ -26,7 +22,7 @@ export function InputMethod({
 
   return (
     <div className={styles.container}>
-      <input 
+      <input
         id={name}
         type="radio"
         value={name}

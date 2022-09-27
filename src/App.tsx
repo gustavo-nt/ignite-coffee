@@ -12,5 +12,5 @@ export function App() {
         </OrderContextProvider>
       </CartContextProvider>
     </BrowserRouter>
-  )
+  );
 }

@@ -1,9 +1,9 @@
-import { useCartContext } from '../../../../contexts/CartContext';
-import { useOrderContext } from '../../../../contexts/OrderContext';
-import { formatPrice } from './../../../../utils/format';
-import { useNavigate } from 'react-router-dom';
+import { useCartContext } from "../../../../contexts/CartContext";
+import { useOrderContext } from "../../../../contexts/OrderContext";
+import { formatPrice } from "./../../../../utils/format";
+import { useNavigate } from "react-router-dom";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 export function Confirmation() {
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ export function Confirmation() {
 
     resetCart();
     createOrder(order);
-    navigate('/success-order', {
+    navigate("/success-order", {
       state: order,
     });
   };

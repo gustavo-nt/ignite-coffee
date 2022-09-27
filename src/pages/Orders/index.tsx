@@ -1,16 +1,16 @@
-import { useOrderContext } from '../../contexts/OrderContext';
-import { formatDate, formatPrice } from './../../utils/format';
-import { ProductCard } from './ProductCard';
-import { NavLink } from 'react-router-dom';
-import { Address } from './Address';
+import { useOrderContext } from "../../contexts/OrderContext";
+import { formatDate, formatPrice } from "./../../utils/format";
+import { ProductCard } from "./ProductCard";
+import { NavLink } from "react-router-dom";
+import { Address } from "./Address";
 
-import styles from './styles.module.scss';
-import { SignOut } from 'phosphor-react';
+import styles from "./styles.module.scss";
+import { SignOut } from "phosphor-react";
 
 export enum PaymentType {
-  debit = 'Cartão de Débito',
-  credit = 'Cartão de Crédito',
-  cash = 'Pagamento em Dinheiro',
+  debit = "Cartão de Débito",
+  credit = "Cartão de Crédito",
+  cash = "Pagamento em Dinheiro",
 }
 
 export function Orders() {
@@ -56,7 +56,7 @@ export function Orders() {
                     <Address address={shippingAddress} />
                   </div>
                 </div>
-              ),
+              )
             )}
           </>
         ) : (
@@ -64,7 +64,7 @@ export function Orders() {
             <p>Nenhum pedido realizado</p>
 
             <NavLink to="/">
-              <button type='button' className={styles.button}>
+              <button type="button" className={styles.button}>
                 <span>Voltar para home</span>
                 <SignOut size={22} weight="fill" />
               </button>

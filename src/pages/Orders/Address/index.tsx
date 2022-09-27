@@ -1,17 +1,17 @@
-import { MapPinLine } from 'phosphor-react';
-import { InputField } from '../../../components/InputField';
-import { ShippingAddress } from '../../../reducers/cart/reducer';
+import { MapPinLine } from "phosphor-react";
+import { InputField } from "../../../components/InputField";
+import { ShippingAddress } from "../../../reducers/cart/reducer";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 enum AddressLabel {
-  city = 'Cidade',
-  state = 'Estado',
-  street = 'Rua',
-  number = 'Número',
-  zipCode = 'CEP',
-  complement = 'Complemento',
-  neighborhood = 'Bairro',
+  city = "Cidade",
+  state = "Estado",
+  street = "Rua",
+  number = "Número",
+  zipCode = "CEP",
+  complement = "Complemento",
+  neighborhood = "Bairro",
 }
 
 interface AddressProps {
@@ -26,7 +26,10 @@ export function Address({ address }: AddressProps) {
 
         <div>
           <h3>Endereço de Entrega</h3>
-          <p>Confira o seu endereço de entrega, preenchido no momento da sua compra</p>
+          <p>
+            Confira o seu endereço de entrega, preenchido no momento da sua
+            compra
+          </p>
         </div>
       </div>
 

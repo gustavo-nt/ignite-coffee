@@ -23,7 +23,7 @@
   padding: 0.9375rem 1rem;
   background: var(--gray-300);
   border: 1px solid var(--gray-300);
-  transition: all .4s ease 0s;
+  transition: all 0.4s ease 0s;
   text-transform: uppercase;
   color: var(--gray-600);
   align-items: center;
@@ -40,7 +40,7 @@
 }
 
 @media (max-width: 768px) {
-  .content  {
+  .content {
     gap: 0.5rem;
     padding: 0.5rem;
     justify-content: center;

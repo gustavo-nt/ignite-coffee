@@ -1,7 +1,7 @@
-import { Intro } from './components/Intro';
-import { Store } from './components/Store';
+import { Intro } from "./components/Intro";
+import { Store } from "./components/Store";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 export function Home() {
   return (

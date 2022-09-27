@@ -3,7 +3,7 @@
   border-radius: 4px;
   border: 1px solid var(--gray-300);
   background: var(--gray-200);
-  transition: all .4s ease 0s;
+  transition: all 0.4s ease 0s;
 
   display: flex;
   align-items: center;
@@ -20,8 +20,8 @@
     outline: none;
     z-index: 1;
 
-    &[type=number]::-webkit-inner-spin-button,
-    &[type=number]::-webkit-outer-spin-button {
+    &[type="number"]::-webkit-inner-spin-button,
+    &[type="number"]::-webkit-outer-spin-button {
       -webkit-appearance: none;
       margin: 0;
     }
@@ -40,7 +40,7 @@
   span {
     position: absolute;
     color: var(--gray-500);
-    transition: all .4s ease 0s;
+    transition: all 0.4s ease 0s;
     transform: translateY(-50%);
     font-size: 0.75rem;
     right: 0.75rem;

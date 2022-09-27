@@ -1,10 +1,10 @@
-import { MapPinLine } from 'phosphor-react';
-import { useForm } from 'react-hook-form';
-import { InputField } from '../../../../components/InputField';
-import { useCartContext } from '../../../../contexts/CartContext';
-import { ShippingAddress as ShippingFieldNames } from './../../../../reducers/cart/reducer';
+import { MapPinLine } from "phosphor-react";
+import { useForm } from "react-hook-form";
+import { InputField } from "../../../../components/InputField";
+import { useCartContext } from "../../../../contexts/CartContext";
+import { ShippingAddress as ShippingFieldNames } from "./../../../../reducers/cart/reducer";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 interface Field {
   name: keyof ShippingFieldNames;
@@ -29,40 +29,40 @@ const fields: Field[] = [
     name: "zipCode",
     placeholder: "CEP",
     type: "number",
-    maxLength: 9
+    maxLength: 9,
   },
   {
     name: "street",
     placeholder: "Rua",
-    type: "text"
+    type: "text",
   },
   {
     name: "number",
     placeholder: "Número",
-    type: "number"
+    type: "number",
   },
   {
     name: "complement",
     placeholder: "Complemento",
     info: "Opcional",
-    type: "text"
+    type: "text",
   },
   {
     name: "neighborhood",
     placeholder: "Bairro",
-    type: "text"
+    type: "text",
   },
   {
     name: "city",
     placeholder: "Cidade",
-    type: "text"
+    type: "text",
   },
   {
     name: "state",
     placeholder: "UF",
-    type: "text"
-  }
-]
+    type: "text",
+  },
+];
 
 export function ShippingAddress() {
   const {
@@ -71,7 +71,7 @@ export function ShippingAddress() {
   } = useCartContext();
 
   const shippingForm = useForm<ShippingAddressFormData>({
-    mode: 'all',
+    mode: "all",
     defaultValues: {
       zipCode: shippingAddress?.zipCode,
       street: shippingAddress?.street,
@@ -94,20 +94,20 @@ export function ShippingAddress() {
       <div className={styles.description}>
         <MapPinLine size={22} />
 
-        <div className={styles.title}> 
+        <div className={styles.title}>
           <h3>Endereço de Entrega</h3>
           <p>Informe o endereço onde deseja receber seu pedido</p>
         </div>
       </div>
 
       <div className={styles.content}>
-        {fields.map(field => (
-          <div 
+        {fields.map((field) => (
+          <div
             key={field.name}
             className={styles.field}
             data-field={field.name}
           >
-            <InputField 
+            <InputField
               register={register(field.name, {
                 onBlur: handleOnBlurInput,
               })}

@@ -1,6 +1,6 @@
-import { createContext, useContext, useEffect, useReducer } from 'react';
-import { createOrderAction } from '../reducers/order/actions';
-import { Order, orderReducer } from '../reducers/order/reducer';
+import { createContext, useContext, useEffect, useReducer } from "react";
+import { createOrderAction } from "../reducers/order/actions";
+import { Order, orderReducer } from "../reducers/order/reducer";
 
 interface OrderContextProviderProps {
   children: React.ReactNode;
@@ -23,7 +23,7 @@ export const OrderContextProvider = ({
     },
     () => {
       const storedStateAsJSON = localStorage.getItem(
-        '@coffee-delivery:orders-state-1.0.0',
+        "@coffee-delivery:orders-state-1.0.0"
       );
 
       if (storedStateAsJSON) {
@@ -33,7 +33,7 @@ export const OrderContextProvider = ({
       return {
         orders: [],
       };
-    },
+    }
   );
 
   const createOrder = (order: Order) => {
@@ -43,7 +43,7 @@ export const OrderContextProvider = ({
   useEffect(() => {
     const stateJSON = JSON.stringify(orderState);
 
-    localStorage.setItem('@coffee-delivery:orders-state-1.0.0', stateJSON);
+    localStorage.setItem("@coffee-delivery:orders-state-1.0.0", stateJSON);
   }, [orderState]);
 
   return (
