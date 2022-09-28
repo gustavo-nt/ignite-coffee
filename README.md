@@ -74,13 +74,6 @@ Esse projeto foi utilizou das seguintes lib:
 - react-router-dom
 - react-hook-form
 
-###  📘 Padrão de Código
-
-Para padronizar a escrita do código, utilizamos as seguinte ferramentas:
-
-- Eslint
-- Prettier
-
 ### 📝 Licença
 
 Esse projeto está sob a licença MIT.
