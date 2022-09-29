@@ -34,10 +34,10 @@
 - [x] Criar pedido
 - [x] Listar pedidos
 
-💻 Projeto
+### 💻 Projeto
 Coffee Delivery é um ecommerce dos mais variados tipos de cafés, com entregas na sua residência. Esse Projeto foi desenvolvido como desafio principal da Semana 02 do Bootcamp Ignite.
 
-### 💻 Demonstração
+### ✅ Demonstração
 <img src="https://github.com/gustavo-nt/ignite-coffee/blob/master/src/assets/cover.png" alt="Imagem de demonstração" />
 
 ### ⚙ Pré-requisitos
